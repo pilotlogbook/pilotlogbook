@@ -1,12 +1,12 @@
-{ mkDerivation, base, checkers, hedgehog, lens, QuickCheck, stdenv
-, tasty, tasty-hedgehog, tasty-hunit, tasty-quickcheck
-, transformers
+{ mkDerivation, base, checkers, dimensional, hedgehog, lens
+, QuickCheck, stdenv, tasty, tasty-hedgehog, tasty-hunit
+, tasty-quickcheck, transformers, vfr-waypoints
 }:
 mkDerivation {
   pname = "pilotlogbook";
-  version = "0.1.0.1";
+  version = "0.0.1";
   src = ./.;
-  libraryHaskellDepends = [ base lens ];
+  libraryHaskellDepends = [ base dimensional lens vfr-waypoints ];
   testHaskellDepends = [
     base checkers hedgehog lens QuickCheck tasty tasty-hedgehog
     tasty-hunit tasty-quickcheck transformers
