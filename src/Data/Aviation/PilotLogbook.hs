@@ -4,6 +4,8 @@ module Data.Aviation.PilotLogbook where
 
 import Control.Lens
 import Data.List.NonEmpty
+import Data.Aviation.VFR_Waypoints
+import Geodetics.Types.Latitude
 
 data Coordinate =
   Coordinate
@@ -15,7 +17,7 @@ data Waypoint =
     String
     (Maybe Coordinate)
   | VFR
-      -- VFR_Waypoint
+      VFR_Waypoint
 
 newtype Runway =
   Runway
