@@ -1,34 +1,29 @@
+{-# LANGUAGE NoImplicitPrelude #-}
 {-# LANGUAGE TemplateHaskell #-}
+{-# LANGUAGE TypeFamilies #-}
+{-# LANGUAGE FlexibleInstances #-}
+{-# LANGUAGE MultiParamTypeClasses #-}
+{-# LANGUAGE DeriveDataTypeable #-}
+{-# LANGUAGE DeriveGeneric #-}
 
 module Data.Aviation.PilotLogbook where
 
-import Control.Lens
-import Data.List.NonEmpty
-import Data.Aviation.VFR_Waypoints
+import Data.Aviation.PilotLogbook.Runway
+import Data.Aviation.PilotLogbook.Waypoint
+import Data.Aviation.VFR_Waypoints(VFR_Waypoint)
+import Data.Data(Data)
+import Geodetics.Types.Altitude
 import Geodetics.Types.Latitude
-
-data Coordinate =
-  Coordinate
-    Double
-    Double
-
-data Waypoint =
-  Waypoint
-    String
-    (Maybe Coordinate)
-  | VFR
-      VFR_Waypoint
-
-newtype Runway =
-  Runway
-    String
+import Geodetics.Types.Longitude
+import GHC.Generics(Generic)
+import Papa
 
 data WaypointArrivalType =
-  FullStop (Maybe Runway)
-  | TouchAndGo (Maybe Runway)
-  | StopAndGo (Maybe Runway)
-  | GoAround (Maybe Runway)
-  | Overfly (Maybe Int) -- height
+  FullStop Runway
+  | TouchAndGo Runway
+  | StopAndGo Runway
+  | GoAround Runway
+  | Overfly (Maybe Altitude)
 
 data WaypointArrival =
   WaypointArrival

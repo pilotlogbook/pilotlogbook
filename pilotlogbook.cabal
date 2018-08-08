@@ -24,13 +24,16 @@ source-repository     head
 
 library
   exposed-modules:    Data.Aviation.PilotLogbook
+                    , Data.Aviation.PilotLogbook.Runway
+                    , Data.Aviation.PilotLogbook.Waypoint
   build-depends:      base              >= 4.8     && < 4.12
                     , lens              >= 4.15    && < 4.18
                     , vfr-waypoints     >= 0.1.0.2 && < 0.2
                     , geodetic-types    >= 0.0.1   && < 0.1
+                    , papa              >= 0.3.1   && < 0.4
   hs-source-dirs:     src
   default-language:   Haskell2010
-  ghc-options:        -Wall
+  ghc-options:        -Wall -ddump-splices
   if impl(ghc<8.0.1)
     build-depends:    semigroups        >= 0.9     && < 0.19
 
