@@ -28,7 +28,7 @@ instance Wrapped Runway where
     iso
       (\(Runway x) -> x)
       Runway
-
+  
 instance Semigroup Runway where
 instance Monoid Runway where
   mempty =
