@@ -35,7 +35,8 @@ library
                     , vfr-waypoints     >= 0.1.0.2 && < 0.2
                     , geodetic-types    >= 0.0.1   && < 0.1
                     , papa              >= 0.3.1   && < 0.4
-                    , alphachar         >= 0.3     && < 1.0
+                    , alphachar         >= 0.0.3   && < 1.0
+                    , dimensional       >= 1.1     && < 1.2
   hs-source-dirs:     src
   default-language:   Haskell2010
   ghc-options:        -Wall -ddump-splices

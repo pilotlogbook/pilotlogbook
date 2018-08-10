@@ -52,12 +52,12 @@ let
 
   modifiedHaskellPackages = haskellPackages.override {
     overrides = self: super: {
-      vfr-waypoints = super.callCabal2nix "vfr-waypoints" "${sources.vfr-waypoints}/vfr-waypoints" {};
+      vfr-waypoints = import sources.vfr-waypoints { inherit nixpkgs compiler; };
       hedgehog = super.callCabal2nix "hedgehog" "${sources.hedgehog}/hedgehog" {};
       tasty-hedgehog = super.callCabal2nix "tasty-hedgehog" "${sources.tasty-hedgehog}" {};
-      dimensional = import sources.dimensional { inherit nixpkgs compiler; };
-      geodetic-types = super.callCabal2nix "geodetic-types" "${sources.geodetic-types}/geodetic-types" {};
-      alphachar = super.callCabal2nix "alphachar" "${sources.alphachar}/alphachar" {};
+      dimensional = super.callCabal2nix "dimensional" "${sources.dimensional}" {};
+      geodetic-types = import sources.geodetic-types { inherit nixpkgs compiler; };
+      alphachar = import sources.alphachar { inherit nixpkgs compiler; };
     };
   };
 
