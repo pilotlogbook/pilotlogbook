@@ -7,7 +7,7 @@ module Data.Aviation.PilotLogbook.Route(
 
 import Data.Aviation.PilotLogbook.WaypointTerminal(WaypointTerminal)
 import Data.Aviation.PilotLogbook.WaypointArrival(WaypointArrival)
-import GHC.Generics
+import GHC.Generics(Generic)
 import Papa
 
 data Route =

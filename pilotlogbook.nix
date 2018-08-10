@@ -1,13 +1,15 @@
-{ mkDerivation, alphachar, base, checkers, geodetic-types, hedgehog
-, lens, papa, QuickCheck, stdenv, tasty, tasty-hedgehog
-, tasty-hunit, tasty-quickcheck, transformers, vfr-waypoints
+{ mkDerivation, alphachar, base, checkers, digit, dimensional
+, geodetic-types, hedgehog, lens, natural, papa, QuickCheck, stdenv
+, tasty, tasty-hedgehog, tasty-hunit, tasty-quickcheck, time
+, transformers, vfr-waypoints
 }:
 mkDerivation {
   pname = "pilotlogbook";
   version = "0.0.1";
   src = ./.;
   libraryHaskellDepends = [
-    alphachar base geodetic-types lens papa vfr-waypoints
+    alphachar base digit dimensional geodetic-types lens natural papa
+    time vfr-waypoints
   ];
   testHaskellDepends = [
     base checkers hedgehog QuickCheck tasty tasty-hedgehog tasty-hunit

@@ -48,6 +48,20 @@ let
       sha256 = "14j7g52rdqw04zhfk1qykmnga69l1ljiq0d2wimh9dhz0lp6wkhs";
     };
 
+    digit = pkgs.fetchFromGitHub {
+      owner = "qfpl";
+      repo = "digit";
+      rev = "27fd4bb3857649f16c5e5ba188cb1b03d436df60";
+      sha256 = "0bm2bfg27ry7c7aspikvbqj9zk5f0iayy98yy5jk4sprhs9q7alv";
+    };
+
+    natural = pkgs.fetchFromGitHub {
+      owner = "qfpl";
+      repo = "natural";
+      rev = "cbbf084529cb968a62899ec728b6c09107ce3d0b";
+      sha256 = "1v250mnvhyx2apcz7fk90i6iwwfqm66w7ywgdaizp6nwg0jn2jci";
+    };
+
   };
 
   modifiedHaskellPackages = haskellPackages.override {
@@ -58,6 +72,8 @@ let
       dimensional = super.callCabal2nix "dimensional" "${sources.dimensional}" {};
       geodetic-types = import sources.geodetic-types { inherit nixpkgs compiler; };
       alphachar = import sources.alphachar { inherit nixpkgs compiler; };
+      digit = import sources.digit { inherit nixpkgs compiler; };
+      natural = import sources.natural { inherit nixpkgs compiler; };
     };
   };
 
