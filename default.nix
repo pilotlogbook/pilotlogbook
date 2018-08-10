@@ -9,8 +9,8 @@ let
     vfr-waypoints = pkgs.fetchFromGitHub {
       owner = "qfpl";
       repo = "vfr-waypoints";
-      rev = "0f4a9228a6abcc09a0b59fd7dca05b9fe833c12f";
-      sha256 = "0sf8qf8hna5g6348pj0n422jjng7l9g2bjvwjxg4gxyhjkqqfncv";
+      rev = "ab84d98fb9b2d50a2b08a255893ec9351706db00";
+      sha256 = "0nwaidy06phwq3h8ard2ms2ipzhf99m1dhrm4z27i4hgdx1raxdc";
     };
 
     hedgehog = pkgs.fetchFromGitHub {
@@ -37,8 +37,8 @@ let
     geodetic-types = pkgs.fetchFromGitHub {
       owner = "qfpl";
       repo = "geodetic-types";
-      rev = "b9cf90cbd4be0a8942ba5f8c1b6244c739ce5ff2";
-      sha256 = "0zaid43yl0jyl614n8q5hsg34hgzkkyr6d6ksbvzirs29kp9bq3j";
+      rev = "6e41e9c638a1349743842056a400797f60122f13";
+      sha256 = "1gb6b4dcs3d2rv19gp2kg1rlaccvirr5gphh47q3h57rnnv9rnki";
     };
 
     alphachar = pkgs.fetchFromGitHub {
