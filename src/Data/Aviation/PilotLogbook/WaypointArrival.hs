@@ -10,8 +10,8 @@ import Data.Aviation.PilotLogbook.WaypointArrivalType(WaypointArrivalType)
 import GHC.Generics(Generic)
 import Papa
 
-data WaypointArrival =
+data WaypointArrival note =
   WaypointArrival
-    Waypoint
+    (Waypoint note)
     (NonEmpty WaypointArrivalType)
   deriving (Eq, Ord, Show, Generic)

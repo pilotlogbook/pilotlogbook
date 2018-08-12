@@ -10,9 +10,10 @@ import Data.Aviation.PilotLogbook.WaypointArrival(WaypointArrival)
 import GHC.Generics(Generic)
 import Papa
 
-data Route =
+data Route note =
   Route
-    WaypointTerminal
-    [WaypointArrival]
-    WaypointTerminal
+    (WaypointTerminal note)
+    [WaypointArrival note]
+    (WaypointTerminal note)
+    note
   deriving (Eq, Ord, Show, Generic)

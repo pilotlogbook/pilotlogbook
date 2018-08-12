@@ -12,11 +12,13 @@ import Geodetics.Types.Longitude(Longitude)
 import GHC.Generics(Generic)
 import Papa
 
-data Waypoint =
+data Waypoint note =
   LatLonWaypoint
     String
     (Maybe (Latitude, Longitude))
+    note
   | VFR
       VFR_Waypoint
+      note
   deriving (Eq, Ord, Show, Generic)
   

@@ -3,13 +3,14 @@
 
 module Data.Aviation.PilotLogbook where
 
+import Data.Aviation.PilotLogbook.Route
 import Data.Char.Alpha
 import Data.Digit
 import Data.Time.Calendar
 import GHC.Generics
 import Natural
 import Papa
-
+  
 data AircraftRegistration =
   VHAircraftRegistration Upper Upper Upper
   | RA DecDigit DecDigit DecDigit DecDigit DecDigit DecDigit
@@ -78,12 +79,12 @@ newtype AircraftType =
     String
   deriving (Eq, Ord, Show, Generic)
 
-data Aircraft =
+data Aircraft note =
   Aircraft
     AircraftRegistration
     AircraftCategory
     AircraftType
-    String -- notes
+    note
   deriving (Eq, Ord, Show, Generic)
 
 ----
@@ -113,22 +114,45 @@ newtype Surname =
     (NonEmpty Char)
   deriving (Eq, Ord, Show, Generic)
 
-data Aviator =
-  Aviator
+data Person note =
+  Person
     (Maybe Firstname)
     (Maybe Surname)
     (Maybe Day)
     (Maybe ARN)
     (Maybe RAMembership)
     (Maybe HGFAMembership)
-    String -- notes
+    note
   deriving (Eq, Ord, Show, Generic)
 
 ----
+
+data Command note =
+  InCommand
+  | Dual (PilotLogbook note)
+  | InCommandUnderInstruction (PilotLogbook note)
+  deriving (Eq, Ord, Show, Generic)
+
+data AircraftFlight note =
+  AircraftFlight
+    (Aircraft note)
+    (Command note)
+    (Route note)
+    [PilotLogbook note] -- including PAX
+    -- todo
+    note
+  deriving (Eq, Ord, Show, Generic)
 
 data CASALicences =
   Recreational
   | Private
   | Commercial
   | AirlineTransport
+  deriving (Eq, Ord, Show, Generic)
+
+----
+
+data PilotLogbook note =
+  PilotLogbook
+    (Person note)
   deriving (Eq, Ord, Show, Generic)

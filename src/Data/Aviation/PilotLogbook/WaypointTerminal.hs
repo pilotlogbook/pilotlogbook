@@ -10,8 +10,8 @@ import Data.Aviation.PilotLogbook.Waypoint(Waypoint)
 import GHC.Generics(Generic)
 import Papa
 
-data WaypointTerminal =
+data WaypointTerminal note =
   WaypointTerminal
-    Waypoint
+    (Waypoint note)
     (Maybe Runway)
   deriving (Eq, Ord, Show, Generic)
