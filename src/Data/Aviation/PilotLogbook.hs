@@ -33,7 +33,7 @@ data PropulsionLateralPosition =
   deriving (Eq, Ord, Show, Generic)
 
 data PropulsionType =
-  Piston Natural
+  Piston Positive
   | Jet JetType
   | Electric
   | Rocket
@@ -48,7 +48,7 @@ data Propulsion =
 
 data UAVCategory =
   UAVAeroplane (NonEmpty Propulsion)
-  | UAVCopter (NonEmpty Propulsion) Natural {- rotors -}
+  | UAVCopter (NonEmpty Propulsion) Positive {- rotors -}
   | UAVAirship (NonEmpty Propulsion)
   | UAVPoweredLift (NonEmpty Propulsion)
   deriving (Eq, Ord, Show, Generic)
@@ -60,7 +60,7 @@ data UAVControl =
 
 data AircraftCategory =
   Aeroplane (NonEmpty Propulsion)
-  | Helicopter (NonEmpty Propulsion) Natural {- rotors -}
+  | Helicopter (NonEmpty Propulsion) Positive {- rotors -}
   | PoweredLift (NonEmpty Propulsion)
   | Gyroplane (NonEmpty Propulsion)
   | Airship (NonEmpty Propulsion)
@@ -139,9 +139,12 @@ data AircraftFlight note =
     (Command note)
     (Route note)
     [PilotLogbook note] -- including PAX
+    -- day, night, i/f
     -- todo
     note
   deriving (Eq, Ord, Show, Generic)
+
+----
 
 data CASALicences =
   Recreational

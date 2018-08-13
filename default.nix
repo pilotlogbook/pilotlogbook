@@ -58,8 +58,8 @@ let
     natural = pkgs.fetchFromGitHub {
       owner = "qfpl";
       repo = "natural";
-      rev = "cbbf084529cb968a62899ec728b6c09107ce3d0b";
-      sha256 = "1v250mnvhyx2apcz7fk90i6iwwfqm66w7ywgdaizp6nwg0jn2jci";
+      rev = "c40d378f2b72af07a85a1c84ce933143420ee46b";
+      sha256 = "12p5fblm6wqif03g39xd6m1jw6qqb3qx6b4x345npgi7cgvnz61q";
     };
 
   };
