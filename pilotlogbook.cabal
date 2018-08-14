@@ -40,6 +40,8 @@ library
                     , digit             >= 0.6     && < 1.0
                     , natural           >= 0.3.0.2 && < 1.0.0.0
                     , time              >= 1.5     && < 2
+                    , modern-uri        >= 0.2     && < 0.3
+
   hs-source-dirs:     src
   default-language:   Haskell2010
   ghc-options:        -Wall -ddump-splices
