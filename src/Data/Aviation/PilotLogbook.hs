@@ -29,6 +29,7 @@ data AircraftFlight note =
     (AircraftFlightTime note)
     [Media note]
     [AircraftFlightExpense note]
+    Bool -- review flight?
     note
   deriving (Eq, Ord, Show, Generic)
 
