@@ -23,12 +23,44 @@ source-repository     head
 
 library
   exposed-modules:    Data.Aviation.PilotLogbook
+                    , Data.Aviation.PilotLogbook.Aircraft
+                    , Data.Aviation.PilotLogbook.AircraftCategory
+                    , Data.Aviation.PilotLogbook.AircraftFlightExpense
+                    , Data.Aviation.PilotLogbook.AircraftFlightExpenseType
+                    , Data.Aviation.PilotLogbook.AircraftFlightTime
+                    , Data.Aviation.PilotLogbook.AircraftRegistration
+                    , Data.Aviation.PilotLogbook.AircraftType
+                    , Data.Aviation.PilotLogbook.ARN
+                    , Data.Aviation.PilotLogbook.Currency
+                    , Data.Aviation.PilotLogbook.Firstname
+                    , Data.Aviation.PilotLogbook.HGFAMembership
+                    , Data.Aviation.PilotLogbook.Image
+                    , Data.Aviation.PilotLogbook.ImageFormat
+                    , Data.Aviation.PilotLogbook.JetType
+                    , Data.Aviation.PilotLogbook.Media
+                    , Data.Aviation.PilotLogbook.Person
+                    , Data.Aviation.PilotLogbook.Propulsion
+                    , Data.Aviation.PilotLogbook.PropulsionLateralPosition
+                    , Data.Aviation.PilotLogbook.PropulsionType
+                    , Data.Aviation.PilotLogbook.RAMembership
                     , Data.Aviation.PilotLogbook.Route
                     , Data.Aviation.PilotLogbook.Runway
+                    , Data.Aviation.PilotLogbook.SixMinuteTime
+                    , Data.Aviation.PilotLogbook.Sound
+                    , Data.Aviation.PilotLogbook.SoundFormat
+                    , Data.Aviation.PilotLogbook.Surname
+                    , Data.Aviation.PilotLogbook.TrackLog
+                    , Data.Aviation.PilotLogbook.TrackLogFormat
+                    , Data.Aviation.PilotLogbook.UAVCategory
+                    , Data.Aviation.PilotLogbook.UAVControl
+                    , Data.Aviation.PilotLogbook.Video
+                    , Data.Aviation.PilotLogbook.VideoFormat
+                    , Data.Aviation.PilotLogbook.Visualisation
+                    , Data.Aviation.PilotLogbook.VisualisationFormat
                     , Data.Aviation.PilotLogbook.Waypoint
-                    , Data.Aviation.PilotLogbook.WaypointTerminal
                     , Data.Aviation.PilotLogbook.WaypointArrival
                     , Data.Aviation.PilotLogbook.WaypointArrivalType
+                    , Data.Aviation.PilotLogbook.WaypointTerminal
 
   build-depends:      base              >= 4.8     && < 4.12
                     , lens              >= 4.15    && < 4.18
