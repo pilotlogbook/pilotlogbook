@@ -17,6 +17,7 @@ data Command note =
   InCommand
   | Dual (PilotLogbook note)
   | InCommandUnderInstruction (PilotLogbook note)
+  | FlightReview (PilotLogbook note)
   deriving (Eq, Ord, Show, Generic)
 
 data AircraftFlight note =
@@ -29,7 +30,6 @@ data AircraftFlight note =
     (AircraftFlightTime note)
     [Media note]
     [AircraftFlightExpense note]
-    Bool -- review flight?
     note
   deriving (Eq, Ord, Show, Generic)
 
