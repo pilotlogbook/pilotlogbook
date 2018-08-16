@@ -5,6 +5,9 @@ module Data.Aviation.PilotLogbook.Visualisation(
   Visualisation(..)
 ) where
 
+import Data.Aviation.PilotLogbook.Caption(Caption)
+import Data.Aviation.PilotLogbook.Name(Name)
+import Data.Aviation.PilotLogbook.Source(Source)
 import Data.Aviation.PilotLogbook.VisualisationFormat(VisualisationFormat)
 import GHC.Generics(Generic)
 import Papa
@@ -14,9 +17,9 @@ data Visualisation note =
   Visualisation
     URI
     VisualisationFormat
-    String -- name
-    String -- caption
-    String -- source
+    Name
+    Caption
+    Source
     note
   deriving (Eq, Ord, Show, Generic)
 

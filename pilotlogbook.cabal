@@ -31,13 +31,19 @@ library
                     , Data.Aviation.PilotLogbook.AircraftRegistration
                     , Data.Aviation.PilotLogbook.AircraftType
                     , Data.Aviation.PilotLogbook.ARN
+                    , Data.Aviation.PilotLogbook.Caption
                     , Data.Aviation.PilotLogbook.Currency
+                    , Data.Aviation.PilotLogbook.ExpenseRate
+                    , Data.Aviation.PilotLogbook.ExpenseTotal
                     , Data.Aviation.PilotLogbook.Firstname
+                    , Data.Aviation.PilotLogbook.FlightSimulator
+                    , Data.Aviation.PilotLogbook.FlightSimulatorType
                     , Data.Aviation.PilotLogbook.HGFAMembership
                     , Data.Aviation.PilotLogbook.Image
                     , Data.Aviation.PilotLogbook.ImageFormat
                     , Data.Aviation.PilotLogbook.JetType
                     , Data.Aviation.PilotLogbook.Media
+                    , Data.Aviation.PilotLogbook.Name
                     , Data.Aviation.PilotLogbook.Person
                     , Data.Aviation.PilotLogbook.Propulsion
                     , Data.Aviation.PilotLogbook.PropulsionLateralPosition
@@ -45,9 +51,13 @@ library
                     , Data.Aviation.PilotLogbook.RAMembership
                     , Data.Aviation.PilotLogbook.Route
                     , Data.Aviation.PilotLogbook.Runway
+                    , Data.Aviation.PilotLogbook.SimulatorFlightExpense
+                    , Data.Aviation.PilotLogbook.SimulatorFlightExpenseType
+                    , Data.Aviation.PilotLogbook.SimulatorFlightTime
                     , Data.Aviation.PilotLogbook.SixMinuteTime
                     , Data.Aviation.PilotLogbook.Sound
                     , Data.Aviation.PilotLogbook.SoundFormat
+                    , Data.Aviation.PilotLogbook.Source
                     , Data.Aviation.PilotLogbook.Surname
                     , Data.Aviation.PilotLogbook.TrackLog
                     , Data.Aviation.PilotLogbook.TrackLogFormat

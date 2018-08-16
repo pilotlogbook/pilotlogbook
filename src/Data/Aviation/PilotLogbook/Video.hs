@@ -5,6 +5,9 @@ module Data.Aviation.PilotLogbook.Video(
   Video(..)
 ) where
 
+import Data.Aviation.PilotLogbook.Caption(Caption)
+import Data.Aviation.PilotLogbook.Name(Name)
+import Data.Aviation.PilotLogbook.Source(Source)
 import Data.Aviation.PilotLogbook.VideoFormat(VideoFormat)
 import GHC.Generics(Generic)
 import Papa
@@ -14,8 +17,8 @@ data Video note =
   Video
     URI
     VideoFormat
-    String -- name
-    String -- caption
-    String -- source
+    Name
+    Caption
+    Source
     note
   deriving (Eq, Ord, Show, Generic)

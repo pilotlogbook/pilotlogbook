@@ -18,4 +18,3 @@ data AircraftFlightExpense note =
     String
     note
   deriving (Eq, Ord, Show, Generic)
-
