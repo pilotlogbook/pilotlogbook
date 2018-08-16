@@ -42,6 +42,7 @@ library
                     , Data.Aviation.PilotLogbook.Image
                     , Data.Aviation.PilotLogbook.ImageFormat
                     , Data.Aviation.PilotLogbook.JetType
+                    , Data.Aviation.PilotLogbook.Location
                     , Data.Aviation.PilotLogbook.Media
                     , Data.Aviation.PilotLogbook.Name
                     , Data.Aviation.PilotLogbook.Person

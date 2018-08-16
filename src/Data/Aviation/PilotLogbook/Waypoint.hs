@@ -6,20 +6,15 @@ module Data.Aviation.PilotLogbook.Waypoint(
   Waypoint(..)
 ) where
 
-import Data.Aviation.PilotLogbook.Name(Name)
+import Data.Aviation.PilotLogbook.Location(Location)
 import Data.Aviation.VFR_Waypoints(VFR_Waypoint)
-import Geodetics.Types.Latitude(Latitude)
-import Geodetics.Types.Longitude(Longitude)
 import GHC.Generics(Generic)
 import Papa
 
 data Waypoint note =
-  LatLonWaypoint
-    Name
-    (Maybe (Latitude, Longitude))
-    note
+  LocationWaypoint
+    (Location note)
   | VFR
       VFR_Waypoint
       note
   deriving (Eq, Ord, Show, Generic)
-  
